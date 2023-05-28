@@ -5,7 +5,6 @@ from PIL import Image
 import torch.nn as nn
 import numpy as np
 import os
-import cv2
 
 
 def preprocess_input(image):
