@@ -179,6 +179,10 @@ c1, c2 = st.beta_columns(2)
 
 if upload is not None:
     im = Image.open(upload)
+
+    # Convertir l'image en mode RGB
+    im = im.convert('RGB')
+
     img = np.asarray(im)
     img = preprocess_input(img)
     img = np.expand_dims(img, 0)
@@ -194,7 +198,5 @@ if upload is not None:
     pred_class = pred_class.item()
     c2.header('Output')
     c2.subheader('Predicted class:')
-    #c2.write(classes[pred_class])
     c2.write(pred_class)
-    #c2.write(probabilities.tolist()[0])
 
