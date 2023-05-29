@@ -175,7 +175,7 @@ st.markdown('<h2 style="color:gray;">The image classification model classifies i
 st.markdown('<h3 style="color:gray;">0,1,2,3,4,5,6,7,8,9</h3>', unsafe_allow_html=True)
 
 upload = st.file_uploader('Insert image for classification', type=['png', 'jpg'])
-c1, c2 = st.columns(2)
+c1, c2 = st.beta_columns(2)
 
 if upload is not None:
     im = Image.open(upload)
